@@ -263,7 +263,7 @@ class MusicPlayer(EventEmitter, Serializable):
 
                 boptions = "-nostdin"
                 # aoptions = "-vn -b:a 192k"
-                aoptions = "-vn"
+                aoptions = "-filter:a \"asetrate=60000\" -vn"
 
                 log.ffmpeg("Creating player with options: {} {} {}".format(boptions, aoptions, entry.filename))
 
